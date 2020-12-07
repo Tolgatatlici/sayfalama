@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Çalışan</title>
+</head>
+<body>
+    <div align="center">
+        <h1> Yeni Çalışan Ekleme Alanı</h1>
+        </br>
+
+        <form action="#" th:action="@{/save}" th:object="${employee}" method="post">
+            <table border="1" cellpadding="10">
+                <tr>
+                    <td>Çalışanın Adı</td>
+                    <td><input type="text" th:field="*{ad}"/></td>
+                </tr>
+                <tr>
+                    <td>Çalışanın SoyAdı</td>
+                    <td><input type="text" th:field="*{soyad}"/></td>
+                </tr>
+                <tr>
+                    <td>Çalışanın Departmanı</td>
+                    <td><input type="text" th:field="*{dep}"/></td>
+                </tr>
+                <tr>
+                    <td>Çalışanın Mail'i</td>
+                    <td><input type="text" th:field="*{mail}"/></td>
+                </tr>
+                <tr>
+                    <td>Çalışanın Bölgesi</td>
+                    <td><input type="text" th:field="*{bolge}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button type="submit">kaydet</button></td>
+                </tr>
+</table>
+</form>
+
+</div>
+
+
+</body>
+</html>
